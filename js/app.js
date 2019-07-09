@@ -34,7 +34,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
    var product= a * b;
-   var productMsg = '"The product of ' + a + ' and ' + b + ' is ' + product + '."';
+   var productMsg = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
    return [product,productMsg];
 }
 console.log(multiply(5,9));
@@ -59,8 +59,8 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
  var sum = a + b + c;
  var product = a * b * c;
- var sumMsg = 'Third element: "' + a + ' and '+ b + ' and ' + c + ' to ' + sum + '."';
- var productMsg = 'Fourth element: "The product of '+ a + ' and '+ b + ' and ' + c + ' is ' + product + '."';
+ var sumMsg = 'Third element: "' + a + ' and '+ b + ' and ' + c + ' to ' + sum + '.';
+ var productMsg = 'Fourth element: The product of '+ a + ' and '+ b + ' and ' + c + ' is ' + product + '.';
  return [sum,product,sumMsg,productMsg]
 }
 console.log(sumAndMultiply(4,7,5));
@@ -83,9 +83,11 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+ var sum = testArray[0] + testArray[1] + testArray[2];
+ var sumMsg =  + testArray[0] + ','+testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
+return [sum,sumMsg];
 }
-
+console.log(sumArray(2,3,4));
 // Here is the test for sumArray(); uncomment it to run it
 
 // testSumArray(testArray);
