@@ -95,15 +95,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-function sum(a, b) {   
+function sum(a, b) {
     var calculateSum = a + b;
     return calculateSum;
 }
 
 var testArray = [2, 3, 4];
 var sumArr;
-function sumArray(sumArr) { 
-    var sumArr =testArray;
+
+function sumArray(sumArr) {
+    var sumArr = testArray;
     var addArray = sum(testArray[0], testArray[1]);
     var finalSumArr = sum(addArray, testArray[2]);
 
@@ -127,9 +128,24 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    var product = a * b;
+    return product;
+}
+
+var testArray = [2, 3, 4];
+var multArr;
+
+function multiplyArray(multArr) { //eslint-disable-line
+    multArr = testArray;
+    var arrProduct = multiply(multArr[0], multArr[1]);
+    var finalArrProduct = multiply(multArr[2], arrProduct);
+    var multArrMsg = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + parseInt(finalArrProduct) + '.';
+    return [finalArrProduct, multArrMsg];
+
+}
+console.log(multiplyArray(multArr));
 
 
-    
 //Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
 
